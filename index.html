@@ -1,139 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sadia Arshad - Full-Stack Developer & AI Technologist</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Sadia Arshad | Full-Stack Developer & AI Technologist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --accent: #5b21b6;
+      --accent-light: #ede9fe;
+      --bg: #f9fafb;
+      --card: #fff;
+      --text: #23272f;
+      --muted: #63676e;
+    }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100%;
+      width: 100%;
+    }
+    .container {
+      max-width: 850px;
+      margin: 36px auto;
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 8px 32px 0 rgba(91, 33, 182, 0.07);
+      padding: 38px 30px 30px 30px;
+    }
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: 1px solid #ececec;
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+      gap: 8px;
+    }
+    .title {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 1.18rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .contact {
+      font-size: 1rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 8px;
+      transition: text-decoration 0.1s;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .section-title {
+      font-size: 1.17rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+    .summary {
+      color: var(--text);
+      line-height: 1.6;
+    }
+    ul {
+      margin: 0 0 0 20px;
+      padding: 0;
+      line-height: 1.7;
+    }
+    li {
+      margin-bottom: 3px;
+    }
+    .job {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: bold;
+      color: var(--accent);
+      font-size: 1.06rem;
+    }
+    .job-meta {
+      color: var(--muted);
+      font-size: 0.97rem;
+      margin-bottom: 5px;
+    }
+    .job ul {
+      margin-top: 4px;
+    }
+    .edu, .languages {
+      margin-bottom: 10px;
+    }
+    .lang-badge {
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.95rem;
+      border-radius: 7px;
+      padding: 3px 11px 3px 11px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      display: inline-block;
+      font-weight: 600;
+    }
+    .refs {
+      color: var(--muted);
+      font-style: italic;
+      font-size: 1rem;
+    }
+    @media (max-width: 620px) {
+      .container { padding: 18px 4vw 20px 4vw; }
+      .header { align-items: flex-start; }
+      .title { font-size: 2.0rem;}
+      .subtitle { font-size: 1rem;}
+      .section-title { font-size: 1rem;}
+      .contact { font-size: 0.98rem; gap: 9px;}
+    }
+    /* Animated underline for section titles */
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 32px;
+      background: linear-gradient(90deg, var(--accent) 60%, transparent 100%);
+      border-radius: 2px;
+      margin-top: 4px;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <div class="max-w-3xl mx-auto my-10 bg-white shadow-xl rounded-xl overflow-hidden">
-    <div class="p-8 flex flex-col sm:flex-row sm:items-center sm:space-x-8">
-      <!-- Profile (photo removed for privacy, add <img> if needed) -->
-      <div class="flex-shrink-0 hidden sm:block">
-        <!-- <img src="YOUR_IMAGE_URL" alt="Sadia Arshad" class="w-28 h-28 rounded-full border-4 border-indigo-200 shadow"> -->
-      </div>
-      <div>
-        <h1 class="text-3xl font-extrabold text-indigo-700">Sadia Arshad</h1>
-        <h2 class="text-lg font-medium text-gray-700 mb-2">Transformational Full-Stack Developer & AI Technologist</h2>
-        <div class="mb-2 flex flex-wrap items-center text-sm text-gray-600">
-          <span class="mr-4 flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 7a4 4 0 01-8 0M12 14v7m0 0H5a2 2 0 01-2-2v-5a2 2 0 012-2h14a2 2 0 012 2v5a2 2 0 01-2 2h-7z"></path></svg> Karachi, Pakistan</span>
-          <span class="mr-4 flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13V6a2 2 0 00-2-2h-6a2 2 0 00-2 2v11a2 2 0 002 2h6zm12-3v-9a2 2 0 00-2-2H9a2 2 0 00-2 2v9a2 2 0 002 2h10a2 2 0 002-2z"></path></svg> shahzaibsadia@gmail.com</span>
-          <span class="mr-4 flex items-center"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg> +92 318 0022016</span>
-        </div>
-        <div class="flex space-x-4">
-          <a href="https://www.linkedin.com/in/sad1a-arshad/" target="_blank" class="text-indigo-600 hover:underline font-medium">LinkedIn</a>
-          <a href="https://github.com/sad1a-arshad" target="_blank" class="text-gray-700 hover:underline font-medium">GitHub</a>
-        </div>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="title">Sadia Arshad</div>
+      <div class="subtitle">Transformational Full-Stack Developer & AI Technologist</div>
+      <div class="contact">
+        <span>Karachi, Pakistan</span>
+        <span>+92 318 0022016</span>
+        <a href="mailto:shahzaibsadia@gmail.com">shahzaibsadia@gmail.com</a>
+        <a href="https://github.com/sad1a-arshad" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/sad1a-arshad/" target="_blank">LinkedIn</a>
       </div>
     </div>
-
-    <div class="border-t border-gray-200 px-8 py-6">
-      <!-- Summary -->
-      <section class="mb-7">
-        <h3 class="text-xl font-bold text-indigo-700 mb-2">Summary</h3>
-        <p class="text-gray-700">
-          Dynamic and innovative Full-Stack Developer with over a decade of experience delivering high-impact web and AI-based solutions. Renowned for expertise in Ruby on Rails, JavaScript (React, Vue.js), and cutting-edge real-time technologies like Hotwire and Stimulus. Adept at crafting secure, scalable, and user-friendly applications with seamless integration of third-party APIs and cloud services.<br><br>
-          Passionate about AI innovation, I excel in implementing advanced technologies including text, image, video, speech, and document question-answering solutions, as well as AI-driven database management and SEO optimizations. Skilled in chatbot and voice assistant development, with hands-on experience across diverse industries such as healthcare, e-commerce, and financial services.
-        </p>
-      </section>
-
-      <!-- Core Competencies -->
-      <section class="mb-7">
-        <h3 class="text-xl font-bold text-indigo-700 mb-2">Core Competencies</h3>
-        <div class="grid sm:grid-cols-2 gap-2">
-          <ul class="list-disc list-inside text-gray-700">
-            <li><span class="font-medium">Programming Languages:</span> Ruby, JavaScript, Python</li>
-            <li><span class="font-medium">Frameworks & Libraries:</span> Ruby on Rails, Hotwire, Stimulus, React, Vue.js</li>
-            <li><span class="font-medium">AI & ML:</span> Text, Image, Vision, Audio, Video Processing; Whisper Models; Embedding Models; Text-to-SQL; AI-based Document Parsing, SEO Tools</li>
-            <li><span class="font-medium">API Dev & Integration:</span> Twilio, Auth0, Fitbit, Strava, Rapid API; REST, GraphQL, JSON, OAuth</li>
-            <li><span class="font-medium">Cloud Services:</span> Google APIs, Azure, AWS, Heroku, DigitalOcean, Docker</li>
-          </ul>
-          <ul class="list-disc list-inside text-gray-700">
-            <li><span class="font-medium">Databases:</span> PostgreSQL, MySQL, MongoDB</li>
-            <li><span class="font-medium">Real-Time Solutions:</span> Real-Time Chat, Chatbots, Voice Assistants, WebSocket, Push Notifications</li>
-            <li><span class="font-medium">UI/UX & Optimization:</span> Responsive Design, Tailwind, Bootstrap, Load Balancing, Caching</li>
-            <li><span class="font-medium">Cybersecurity:</span> SSL, OAuth, CSRF, Secure Coding</li>
-            <li><span class="font-medium">Other:</span> Agile (Scrum, Trello, JIRA), SEO & Analytics (Google Analytics, Webmaster Tools)</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Professional Experience -->
-      <section class="mb-7">
-        <h3 class="text-xl font-bold text-indigo-700 mb-2">Professional Experience</h3>
-        <div class="space-y-5 text-gray-700">
-          <div>
-            <div class="font-semibold">AI-Based Startup Founder</div>
-            <div class="text-sm text-gray-600">Self-Employed, Islamabad, Pakistan &middot; 2021 – Present</div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Spearheaded development of AI-powered startups focused on real-world problem-solving.</li>
-              <li>Designed and implemented AI-driven solutions for text, image, speech, and video processing.</li>
-              <li>Collaborated with cross-functional teams to secure funding, scale operations, and deliver impactful applications.</li>
-              <li>Integrated advanced AI models into web applications, enhancing performance and usability.</li>
-            </ul>
-          </div>
-          <div>
-            <div class="font-semibold">Senior Ruby on Rails Developer</div>
-            <div class="text-sm text-gray-600">Cooperative Computing, Karachi, Pakistan &middot; Nov 2019 – Nov 2020</div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Built scalable, secure web applications leveraging Ruby on Rails and modern front-end technologies.</li>
-              <li>Integrated third-party APIs to enhance functionality and streamline processes for clients.</li>
-              <li>Mentored junior developers, fostering a culture of continuous learning.</li>
-            </ul>
-          </div>
-          <div>
-            <div class="font-semibold">Full-Stack Ruby on Rails Engineer</div>
-            <div class="text-sm text-gray-600">Daewoo Pakistan Express Bus Service, Lahore &middot; Jan 2016 – Oct 2019</div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Led development of an online booking system, boosting customer satisfaction and operational efficiency.</li>
-              <li>Collaborated with IT teams to modernize the company's digital infrastructure with scalable solutions.</li>
-            </ul>
-          </div>
-          <div>
-            <div class="font-semibold">Ruby on Rails Developer</div>
-            <div class="text-sm text-gray-600">IntensityLabs, Lahore, Pakistan &middot; Jan 2014 – Dec 2015</div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Engineered robust web applications, ensuring top-tier performance and usability.</li>
-              <li>Delivered client-focused solutions that exceeded business goals.</li>
-            </ul>
-          </div>
-          <div>
-            <div class="font-semibold">SEO Team Lead</div>
-            <div class="text-sm text-gray-600">EGlobalSolution, Lahore, Pakistan &middot; Oct 2011 – Dec 2013</div>
-            <ul class="list-disc list-inside ml-4">
-              <li>Developed and implemented SEO strategies that drove significant traffic growth for multiple clients.</li>
-              <li>Collaborated with development teams to integrate SEO best practices into web projects.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Education -->
-      <section class="mb-7">
-        <h3 class="text-xl font-bold text-indigo-700 mb-2">Education</h3>
-        <div class="text-gray-700">
-          <div class="font-semibold">Bachelor of Science in Information Technology</div>
-          <div class="text-sm text-gray-600">Virtual University of Pakistan</div>
-        </div>
-      </section>
-
-      <!-- Languages -->
-      <section class="mb-7">
-        <h3 class="text-xl font-bold text-indigo-700 mb-2">Languages</h3>
-        <div class="flex flex-wrap gap-x-6 text-gray-700">
-          <span>English: <span class="font-medium">Fluent (Professional)</span></span>
-          <span>Urdu: <span class="font-medium">Native</span></span>
-          <span>Hindi: <span class="font-medium">Proficient</span></span>
-          <span>Punjabi: <span class="font-medium">Proficient</span></span>
-        </div>
-      </section>
-
-      <!-- References -->
-      <section>
-        <h3 class="text-xl font-bold text-indigo-700 mb-2">References</h3>
-        <p class="text-gray-700">References available upon request.</p>
-      </section>
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-title">Summary</div>
+      <div class="summary">
+        Dynamic and innovative Full-Stack Developer with over a decade of experience delivering high-impact web and AI-based solutions. Renowned for expertise in Ruby on Rails, JavaScript (React, Vue.js), and cutting-edge real-time technologies like Hotwire and Stimulus. Adept at crafting secure, scalable, and user-friendly applications with seamless integration of third-party APIs and cloud services.<br><br>
+        Passionate about AI innovation, I excel in implementing advanced technologies including text, image, video, speech, and document question-answering solutions, as well as AI-driven database management and SEO optimizations. Skilled in chatbot and voice assistant development, with hands-on experience across diverse industries such as healthcare, e-commerce, and financial services.
+      </div>
+    </div>
+    <!-- Core Competencies -->
+    <div class="section">
+      <div class="section-title">Core Competencies</div>
+      <ul>
+        <li><b>Programming Languages:</b> Ruby, JavaScript, Python</li>
+        <li><b>Frameworks & Libraries:</b> Ruby on Rails, Hotwire, Stimulus, React, Vue.js</li>
+        <li><b>AI & ML:</b> Text, Image, Vision, Audio, Video Processing; Whisper Models; Embedding Models; Text-to-SQL; AI-based Document Parsing, SEO Tools</li>
+        <li><b>API Development & Integration:</b> Twilio, Auth0, Fitbit, Strava, Rapid API; REST, GraphQL, JSON, OAuth</li>
+        <li><b>Cloud Services:</b> Google APIs, Azure, AWS, Heroku, DigitalOcean, Docker</li>
+        <li><b>Databases:</b> PostgreSQL, MySQL, MongoDB</li>
+        <li><b>Real-Time Solutions:</b> Real-Time Chat, Chatbots, Voice Assistants, WebSocket, Push Notifications</li>
+        <li><b>UI/UX & Optimization:</b> Responsive Design, Tailwind, Bootstrap, Load Balancing, Caching</li>
+        <li><b>Cybersecurity:</b> SSL, OAuth, CSRF, Secure Coding</li>
+        <li><b>Other:</b> Agile (Scrum, Trello, JIRA), SEO & Analytics (Google Analytics, Webmaster Tools)</li>
+      </ul>
+    </div>
+    <!-- Professional Experience -->
+    <div class="section">
+      <div class="section-title">Professional Experience</div>
+      <div class="job">
+        <div class="job-title">AI-Based Startup Founder</div>
+        <div class="job-meta">Self-Employed, Islamabad, Pakistan &middot; 2021 – Present</div>
+        <ul>
+          <li>Spearheaded development of AI-powered startups focused on real-world problem-solving.</li>
+          <li>Designed and implemented AI-driven solutions for text, image, speech, and video processing.</li>
+          <li>Collaborated with cross-functional teams to secure funding, scale operations, and deliver impactful applications.</li>
+          <li>Integrated advanced AI models into web applications, enhancing performance and usability.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Senior Ruby on Rails Developer</div>
+        <div class="job-meta">Cooperative Computing, Karachi, Pakistan &middot; Nov 2019 – Nov 2020</div>
+        <ul>
+          <li>Built scalable, secure web applications leveraging Ruby on Rails and modern front-end technologies.</li>
+          <li>Integrated third-party APIs to enhance functionality and streamline processes for clients.</li>
+          <li>Mentored junior developers, fostering a culture of continuous learning.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Full-Stack Ruby on Rails Engineer</div>
+        <div class="job-meta">Daewoo Pakistan Express Bus Service, Lahore &middot; Jan 2016 – Oct 2019</div>
+        <ul>
+          <li>Led development of an online booking system, boosting customer satisfaction and operational efficiency.</li>
+          <li>Collaborated with IT teams to modernize the company's digital infrastructure with scalable solutions.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">Ruby on Rails Developer</div>
+        <div class="job-meta">IntensityLabs, Lahore, Pakistan &middot; Jan 2014 – Dec 2015</div>
+        <ul>
+          <li>Engineered robust web applications, ensuring top-tier performance and usability.</li>
+          <li>Delivered client-focused solutions that exceeded business goals.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="job-title">SEO Team Lead</div>
+        <div class="job-meta">EGlobalSolution, Lahore, Pakistan &middot; Oct 2011 – Dec 2013</div>
+        <ul>
+          <li>Developed and implemented SEO strategies that drove significant traffic growth for multiple clients.</li>
+          <li>Collaborated with development teams to integrate SEO best practices into web projects.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Education -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu"><b>Bachelor of Science in Information Technology</b><br>
+        Virtual University of Pakistan</div>
+    </div>
+    <!-- Languages -->
+    <div class="section">
+      <div class="section-title">Languages</div>
+      <span class="lang-badge">English: Fluent</span>
+      <span class="lang-badge">Urdu: Native</span>
+      <span class="lang-badge">Hindi: Proficient</span>
+      <span class="lang-badge">Punjabi: Proficient</span>
+    </div>
+    <!-- References -->
+    <div class="section refs">
+      References available upon request.
     </div>
   </div>
 </body>
